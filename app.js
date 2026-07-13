@@ -32,6 +32,7 @@ const CORE_FIELDS = [
   { key: "id", label: "Application ID" },
   { key: "name", label: "Name" },
   { key: "nationality", label: "Nationality" },
+  { key: "passport no", label: "Passport No" },
   { key: "status", label: "Status", multiline: true },
 ];
 
