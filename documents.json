@@ -20,10 +20,5 @@
       "Submitted on 05/06/2026",
       "You will be notified once processing is complete."
     ]
-  },
-    "extra": [
-      { "label": "Document Type", "value": "Certificate of Authenticity" },
-      { "label": "Issued By", "value": "Verification Authority" }
-    ]
-  },
+  }
 ]
