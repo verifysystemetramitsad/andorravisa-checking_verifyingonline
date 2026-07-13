@@ -1,0 +1,46 @@
+[
+  {
+    "id": "4617433448379",
+    "name": "SAJANPREET SINGH SIDHU",
+    "nationality": "INDIAN",
+    "status": [
+      "Visa Granted on 20/01/2020",
+      "Visa Grant No.2001202099349",
+      "E-Visa Sent via Email to Registered Email Address."
+    ]
+  },
+  {
+    "id": "8829104567123",
+    "name": "PRIYA SHARMA",
+    "nationality": "INDIAN",
+    "status": [
+      "Application Under Review",
+      "Submitted on 05/06/2026",
+      "You will be notified once processing is complete."
+    ]
+  },
+  {
+    "id": "7738291045678",
+    "name": "JOHN MICHAEL DOE",
+    "nationality": "AMERICAN",
+    "status": [
+      "Visa Cancelled on 12/03/2025",
+      "Cancellation Ref. CAN-2025-00441",
+      "Contact the issuing authority for details."
+    ]
+  },
+  {
+    "id": "9901234567890",
+    "name": "FATIMA AL-RASHID",
+    "nationality": "EMIRATI",
+    "status": [
+      "Document Verified on 01/07/2026",
+      "Certificate No. CERT-2026-77821",
+      "Valid until 01/07/2028."
+    ],
+    "extra": [
+      { "label": "Document Type", "value": "Certificate of Authenticity" },
+      { "label": "Issued By", "value": "Verification Authority" }
+    ]
+  }
+]

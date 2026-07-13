@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check application status">
+  <title>Check Status</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <div class="status-card">
+      <header class="card-header">
+        <h1 class="card-title">Check Status</h1>
+        <button type="button" class="close-btn" id="close-btn" aria-label="Close">&times;</button>
+      </header>
+
+      <div id="loading" class="card-body loading-panel" aria-live="polite">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Loading status…</p>
+      </div>
+
+      <div id="content" class="card-body hidden" aria-live="polite">
+        <dl class="status-list" id="status-list"></dl>
+      </div>
+
+      <footer class="card-footer">
+        <button type="button" class="refresh-btn" id="refresh-btn">REFRESH</button>
+      </footer>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
