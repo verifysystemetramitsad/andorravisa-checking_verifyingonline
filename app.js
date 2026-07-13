@@ -9,6 +9,7 @@
  *     "id": "YOUR_UNIQUE_ID",
  *     "name": "FULL NAME",
  *     "nationality": "COUNTRY",
+ *     "passportno": "Passport No",
  *     "status": ["Line 1", "Line 2", "Line 3"]
  *   }
  *
@@ -18,7 +19,7 @@
  * GOOGLE SHEETS (optional)
  * ------------------------
  * Set DATA_SOURCE to "sheets" and add your Sheet ID.
- * Columns: id | name | nationality | status
+ * Columns: id | name | nationality | Passport No | status
  * Put multiple status lines in one cell, separated by | (pipe).
  */
 const CONFIG = {
@@ -32,7 +33,7 @@ const CORE_FIELDS = [
   { key: "id", label: "Application ID" },
   { key: "name", label: "Name" },
   { key: "nationality", label: "Nationality" },
-  { key: "passport no", label: "Passport No" },
+  { key: "passportno", label: "Passport No" },
   { key: "status", label: "Status", multiline: true },
 ];
 
@@ -152,6 +153,7 @@ function normalizeRecord(raw) {
     id: get("id", "applicationid"),
     name: get("name"),
     nationality: get("nationality"),
+    passportno: get("passport no"),
     status: parseStatus(get("status")),
     extra: [],
   };
@@ -192,6 +194,7 @@ function showNotFound(id) {
     rowHtml("Application ID", id || "—", false),
     rowHtml("Name", "—", false),
     rowHtml("Nationality", "—", false),
+    rowHtml("Passport No", "—", false),
     rowHtml("Status", ["Invalid Application ID.", "No matching record was found."], true, true),
   ].join("");
 
