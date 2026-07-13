@@ -33,7 +33,7 @@ const CORE_FIELDS = [
   { key: "id", label: "Application ID" },
   { key: "name", label: "Name" },
   { key: "nationality", label: "Nationality" },
-  { key: "passportno", label: "Passport No" },
+  { key: "passport", label: "Passport Number" },
   { key: "status", label: "Status", multiline: true },
 ];
 
@@ -149,14 +149,14 @@ function normalizeRecord(raw) {
     return "";
   };
 
-  const record = {
-    id: get("id", "applicationid"),
-    name: get("name"),
-    nationality: get("nationality"),
-    passportno: get("passport no"),
-    status: parseStatus(get("status")),
-    extra: [],
-  };
+const record = {
+  id: get("id", "applicationid"),
+  name: get("name"),
+  nationality: get("nationality"),
+  passport: get("passport", "passportnumber"),
+  status: parseStatus(get("status")),
+  extra: [],
+};
 
   if (Array.isArray(raw.extra)) {
     record.extra = raw.extra;
@@ -190,13 +190,13 @@ function renderRecord(record) {
 }
 
 function showNotFound(id) {
-  const rows = [
-    rowHtml("Application ID", id || "—", false),
-    rowHtml("Name", "—", false),
-    rowHtml("Nationality", "—", false),
-    rowHtml("Passport No", "—", false),
-    rowHtml("Status", ["Invalid Application ID.", "No matching record was found."], true, true),
-  ].join("");
+const rows = [
+  rowHtml("Application ID", id || "—", false),
+  rowHtml("Name", "—", false),
+  rowHtml("Nationality", "—", false),
+  rowHtml("Passport Number", "—", false),
+  rowHtml("Status", ["Invalid Application ID.", "No matching record was found."], true, true),
+].join("");
 
   els.statusList.innerHTML = rows;
   els.loading.classList.add("hidden");
