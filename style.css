@@ -8,6 +8,7 @@
   --color-border: #e0e0e0;
   --color-refresh: #1a237e;
   --color-refresh-hover: #283593;
+  --color-blue-header: #0288d1;
   --font: "Roboto", system-ui, -apple-system, sans-serif;
 }
 
@@ -30,14 +31,65 @@ body {
   color: var(--color-label);
   min-height: 100vh;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
   display: none !important;
 }
 
+/* Top Header with Logo and Home Button */
+.top-header {
+  background-color: var(--color-blue-header);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-logo {
+  height: 80px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.home-btn {
+  background-color: var(--color-blue-header);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  border: 2px solid #fff;
+  cursor: pointer;
+  text-align: center;
+  min-width: 120px;
+}
+
+.home-btn:hover {
+  background-color: #0277bd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-btn:active {
+  transform: translateY(0);
+}
+
 .page {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -48,7 +100,7 @@ body {
 .status-card {
   width: 100%;
   max-width: 480px;
-  min-height: 100vh;
+  min-height: auto;
   background: var(--color-surface);
   display: flex;
   flex-direction: column;
@@ -65,6 +117,14 @@ body {
     min-height: auto;
     border-radius: 4px;
     overflow: hidden;
+  }
+
+  .top-header {
+    padding: 2rem;
+  }
+
+  .header-logo {
+    height: 100px;
   }
 }
 
@@ -212,5 +272,15 @@ body {
   .status-label,
   .status-value {
     font-size: 0.875rem;
+  }
+
+  .header-logo {
+    height: 70px;
+  }
+
+  .home-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    min-width: 100px;
   }
 }
