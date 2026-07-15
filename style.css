@@ -1,3 +1,7 @@
+/*
+Previous stylesheet restored to undo the last update which refactored the government header.
+Restored content matches the commit 8baf10f00919da9f70cc6edb3803660e7a18a8cb version.
+*/
 :root {
   --color-bg: #eceff1;
   --color-surface: #ffffff;
@@ -291,83 +295,53 @@ body {
     min-width: 110px;
   }
 }
-/* ======================================
+/* ===========================
    GOVERNMENT HEADER
-====================================== */
+=========================== */
 
 .gov-header{
     width:100%;
-    background:#1f4f82;
-    box-shadow:0 2px 10px rgba(0,0,0,.18);
     margin-bottom:30px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
 .gov-top{
-
+    background:#1f4f82;
     display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
+    justify-content:space-between;
     align-items:center;
-
-    padding:25px 20px 20px;
+    padding:18px 40px;
 }
 
-.gov-logo{
-
-    width:130px;
-
-    height:auto;
-
-    margin-bottom:18px;
+.gov-logo img{
+    height:70px;
 }
 
-.gov-title{
-
-    color:#fff;
-
+.gov-title h1{
+    color:#ffffff;
     margin:0;
-
-    font-size:42px;
-
+    font-size:44px;
     font-weight:700;
-
     letter-spacing:1px;
-
     text-transform:uppercase;
-
-    text-align:center;
 }
 
 .gov-nav{
-
-    background:#255487;
-
-    border-top:1px solid rgba(255,255,255,.25);
-
+    background:#245589;
+    border-top:1px solid rgba(255,255,255,.35);
     text-align:center;
 }
 
 .gov-nav a{
-
-    display:block;
-
-    color:white;
-
+    display:inline-block;
+    color:#ffffff;
     text-decoration:none;
-
-    padding:16px;
-
-    font-size:22px;
-
+    padding:16px 40px;
+    font-size:18px;
     font-weight:bold;
-
     transition:.25s;
 }
 
 .gov-nav a:hover{
-
-    background:#1a436d;
+    background:#1b4470;
 }
