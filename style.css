@@ -291,3 +291,53 @@ body {
     min-width: 110px;
   }
 }
+/* ===========================
+   GOVERNMENT HEADER
+=========================== */
+
+.gov-header{
+    width:100%;
+    margin-bottom:30px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.gov-top{
+    background:#1f4f82;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+}
+
+.gov-logo img{
+    height:70px;
+}
+
+.gov-title h1{
+    color:#ffffff;
+    margin:0;
+    font-size:44px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.gov-nav{
+    background:#245589;
+    border-top:1px solid rgba(255,255,255,.35);
+    text-align:center;
+}
+
+.gov-nav a{
+    display:inline-block;
+    color:#ffffff;
+    text-decoration:none;
+    padding:16px 40px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.gov-nav a:hover{
+    background:#1b4470;
+}
