@@ -1,14 +1,13 @@
 :root {
   --color-bg: #eceff1;
   --color-surface: #ffffff;
-  --color-header-start: #7b1fa2;
-  --color-header-end: #9c27b0;
+  --color-banner-start: #7b1fa2;
+  --color-banner-end: #9c27b0;
   --color-label: #37474f;
   --color-value: #78909c;
   --color-border: #e0e0e0;
   --color-refresh: #1a237e;
   --color-refresh-hover: #283593;
-  --color-blue-header: #0288d1;
   --font: "Roboto", system-ui, -apple-system, sans-serif;
 }
 
@@ -39,49 +38,57 @@ body {
   display: none !important;
 }
 
-/* Top Header with Logo and Home Button */
-.top-header {
-  background-color: var(--color-blue-header);
+/* Full-width Banner with Logo and Home Button */
+.top-banner {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-banner-start), var(--color-banner-end));
   padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.header-content {
+.banner-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  gap: 1.25rem;
 }
 
-.header-logo {
-  height: 80px;
+.banner-logo {
+  height: 70px;
   width: auto;
-  max-width: 200px;
+  max-width: 220px;
   object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
 }
 
 .home-btn {
-  background-color: var(--color-blue-header);
+  background-color: rgba(255, 255, 255, 0.15);
   color: #fff;
   text-decoration: none;
-  padding: 0.75rem 2rem;
-  border-radius: 4px;
+  padding: 0.75rem 2.5rem;
+  border-radius: 6px;
   font-weight: 500;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   border: 2px solid #fff;
   cursor: pointer;
   text-align: center;
-  min-width: 120px;
+  min-width: 130px;
+  display: inline-block;
+  backdrop-filter: blur(4px);
 }
 
 .home-btn:hover {
-  background-color: #0277bd;
+  background-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .home-btn:active {
@@ -119,19 +126,19 @@ body {
     overflow: hidden;
   }
 
-  .top-header {
+  .top-banner {
     padding: 2rem;
   }
 
-  .header-logo {
-    height: 100px;
+  .banner-logo {
+    height: 90px;
   }
 }
 
 /* Header */
 .card-header {
   position: relative;
-  background: linear-gradient(135deg, var(--color-header-start), var(--color-header-end));
+  background: linear-gradient(135deg, var(--color-banner-start), var(--color-banner-end));
   color: #fff;
   padding: 1rem 3rem;
   text-align: center;
@@ -183,7 +190,7 @@ body {
   width: 36px;
   height: 36px;
   border: 3px solid var(--color-border);
-  border-top-color: var(--color-header-end);
+  border-top-color: var(--color-banner-end);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
 }
@@ -274,13 +281,13 @@ body {
     font-size: 0.875rem;
   }
 
-  .header-logo {
-    height: 70px;
+  .banner-logo {
+    height: 60px;
   }
 
   .home-btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.6rem 1.75rem;
     font-size: 0.9rem;
-    min-width: 100px;
+    min-width: 110px;
   }
 }
